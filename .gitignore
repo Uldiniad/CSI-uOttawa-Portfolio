@@ -9,9 +9,10 @@
 **/venv/
 **/Deliverable 4/*.zip
 **/Data Structures and Algorithms/
-**/Programming Concepts with C++/Labs
+**/Programming Concepts with C++/
 **/Operating Systems/Labs
 **/Introduction to Computing II/
+**/Technical Report Writing/
 **/ocsf/
 **/simplechat1/
 *use*
@@ -33,6 +34,7 @@
 *.project
 *.dat
 *.jsdtscope
+*.out
 *.tmp
 *.temp
 *.cmo
@@ -57,5 +59,7 @@
 *.bdf
 *.accdb
 *.download
+*.zip
 /2015 Winter/
+/2015 Fall/
 /2019 Winter/
