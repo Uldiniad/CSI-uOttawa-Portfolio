@@ -1,0 +1,58 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <termios.h>
+#include "a2q7.c"
+
+void my_getpass (char *input, FILE *stream)
+{
+  struct termios old, new;
+
+  if (tcgetattr (fileno (stream), &old) != 0)
+    return;
+  new = old;
+  new.c_lflag &= ~ECHO;
+  if (tcsetattr (fileno (stream), TCSAFLUSH, &new) != 0)
+    return;
+
+  scanf("%s",input);
+
+  (void) tcsetattr (fileno (stream), TCSAFLUSH, &old);
+}
+
+int main(void) {
+    EXEC SQL INCLUDE sqlca;
+    EXEC SQL WHENEVER sqlerror sqlprint;
+
+    EXEC SQL BEGIN DECLARE SECTION;
+        char *password = malloc(sizeof(char) * 1024);
+        int sid;
+        char *sname = malloc(sizeof(char) * 1024);
+        float age;
+        float mean;
+    EXEC SQL END DECLARE SECTION;
+
+    printf("Password: ");
+    my_getpass(password,stdin);
+    printf("\n");
+
+    EXEC SQL CONNECT TO oscot042@web0.site.uottawa.ca:15432 USER oscot042/:password;
+    EXEC SQL SET search_path TO "Programming Assignment 2";
+
+    float stdDev = StdDev();
+    EXEC SQL DECLARE sailors CURSOR FOR SELECT sid, sname, age FROM Sailors;
+    EXEC SQL OPEN sailors;
+    EXEC SQL FETCH sailors INTO :sid, :sname, :age;
+    EXEC SQL SELECT AVG(age) INTO :mean FROM sailors;
+    while (strcmp(SQLSTATE, "02000") != 0) {
+        if (fabs(age - mean) < stdDev) printf("%d\t%s\t%f\n", sid, sname, age);
+        EXEC SQL FETCH sailors INTO :sid, :sname, :age;
+    }
+    EXEC SQL CLOSE sailors;
+    printf("Standard Deviation: %f\n", stdDev);
+    printf("Mean: %f\n", mean);
+
+    EXEC SQL COMMIT;
+    EXEC SQL DISCONNECT ALL;
+    return 0;
+}

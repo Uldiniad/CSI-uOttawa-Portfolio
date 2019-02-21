@@ -1,0 +1,15 @@
+﻿"About\n\n" +
+                "• To create a task, visit the TASKS tab and press the plus sign at the bottom-right corner." +
+                " You can store your personal task list without a group, but with limited functionality." +
+                " To edit the task simply click on it once created.\n" +
+                "• If you do not yet have a group, visit the PEOPLE tab and SAVE a distinct group key as your title." +
+                " You will automatically have administrative privileges when you create a group." +
+                " If you want to join an existing group, ask its members what their group title is to SAVE it." +
+                " You will automatically be set as a generic user. To gain administrative privileges, you must be promoted by another user with administrative privileges.\n" +
+                "• If you have administrative privileges and would like to promote another user in your group, visit the PEOPLE tab and long click their name.\n" +
+                "• If you have administrative privileges, you can assign and unassign tasks of your group. " +
+                " To assign, enter the user's username in the assignee field. To unassign, leave blank\n" +
+                "• The Shopping list can be accessed at the SHOPPING tab. To access Food and Tools inventories, access the navigation drawer by clicking the three horizontal lines at the top-left corner.\n" +
+                "• To edit or delete Shopping, Food or Tools items, long click on the item in the list. Remember that everyone in your group can see these lists.\n" +
+                "• Tools in your inventory will appear at the bottom of the screen when creating or editing a task. Tap them to attach them to the task.\n" +
+                "• If you have completed a Task, mark it as complete to receive 5 points. Visit the PEOPLE tab to keep track of how many points each group member has."

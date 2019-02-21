@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="A4_Q7_Scott_7931937.xsl"?>
+<nutrition>
+    <product>Grandma White's Cookies</product>
+    <serving>1</serving>
+    <calories>260</calories>
+    <fatcalories>100</fatcalories>
+    <fat>11</fat>
+    <saturatedfat>2</saturatedfat>
+    <cholesterol>5</cholesterol>
+    <sodium>210</sodium>
+    <carbohydrates>36</carbohydrates>
+    <fiber>2</fiber>
+    <sugar>15</sugar>
+    <protein>5</protein>
+</nutrition>

@@ -1,0 +1,6 @@
+#include <math.h>
+#include "a2q6.c"
+
+float StdDev(void) {
+    return sqrt(Variance());
+}

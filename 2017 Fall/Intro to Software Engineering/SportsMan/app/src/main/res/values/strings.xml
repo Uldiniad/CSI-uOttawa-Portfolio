@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SportsMan</string>
+    <string name="name">Name</string>
+    <string name="please_enter_a_name">(Please enter a name)</string>
+    <string name="open_in_google_maps">Open in Google Maps</string>
+    <string name="location">Location</string>
+    <string name="please_enter_a_location">(Please enter a location)</string>
+    <string name="load_from_phone">Load From Phone</string>
+</resources>

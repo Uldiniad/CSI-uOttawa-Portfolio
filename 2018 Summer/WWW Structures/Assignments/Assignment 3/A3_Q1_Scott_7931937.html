@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A3_Q1_Scott_7931937</title>
+</head>
+<body>
+<form>
+    <input type="number" name="input"><br><br>
+    <button type="button" onclick="document.getElementById('output').innerHTML = celsius(input.value)">Fahrenheit to
+        Celsius
+    </button>
+    <br><br>
+    <button type="button" onclick="document.getElementById('output').innerHTML = fahrenheit(input.value)">Celsius to
+        Fahrenheit
+    </button>
+    <br><br>
+    <output id="output"></output>
+</form>
+<script>
+    function celsius(fahrenheit) {
+        return 5 / 9 * (fahrenheit - 32);
+    }
+
+    function fahrenheit(celsius) {
+        return 9 / 5 * celsius + 32;
+    }
+</script>
+</body>
+</html>

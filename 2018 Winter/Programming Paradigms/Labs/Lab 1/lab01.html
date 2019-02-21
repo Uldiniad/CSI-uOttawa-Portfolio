@@ -1,0 +1,207 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>CSI 2120, Winter 2018, Lab 1</title>
+</head>
+<body>
+<h1> CSI 2120</h1>
+<h2> Lab 1: Prolog</h2>
+
+<h3>Exercise 1. Books on Prolog</h3>
+Consider a small database that represents books,
+readers and loans. 
+
+<pre><code>
+% --------
+% book( Title, Authors, Publisher, Year, CallNumber )
+% --------
+
+book(
+  'The craft of Prolog',
+  'R. A. O''Keefe',
+  'MIT Press',
+  1990,
+  'QA 76.73 .P76 O38 1990'
+).
+book(
+  'Programming in Prolog',
+  'W. F. Clocksin, C. S. Mellish',
+  'Springer',
+  2003,
+  'QA 76.73 .P76 C57 2003'
+).
+book(
+  'Prolog for programmers',
+  'F. Kluzniak, S. Szpakowicz',
+  'Academic Press',
+  1985,
+  'QA 76.73 .P76 K58 1985'
+).
+book(
+  'Prolog programming for artificial intelligence',
+  'I. Bratko',
+  'Addison-Wesley',
+  2001,
+  'Q 336 .B74 2001'
+).
+
+% --------
+% reader( CardNumber, Name )
+% --------
+
+reader( 1234567, 'James Brown' ).
+reader( 2345678, 'Jacques Brun' ).
+reader( 3456789, 'Giacomo Bruno' ).
+
+% --------
+% checkedOut( CardNumber, CallNumber )
+% --------
+
+checkedOut( 1234567, 'QA 76.73 .P76 C57 2003' ).
+checkedOut( 3456789, 'Q 336 .B74 2001' ).
+</code></pre>
+<p>
+Write the queries that find (1) all books published by Springer,
+(2) all books published after 1990,
+(3) all books checked out by James Brown. Next, edit the file to add a 
+few useful entries to each of the three predicates, and run more queries
+ to see that you have not spoiled anything.
+</p>
+
+<h3>Exercise 2: Relationships</h3>
+
+Given the following database of relationship: <br>
+
+<pre><code>
+parent(jack,joe).
+parent(jack,karl).
+parent(marie,anne).
+parent(joe,anne).
+parent(marie,paul).
+parent(joe,paul).
+parent(marie,sylvie).
+parent(bruno,sylvie).
+parent(anne,zach).
+parent(tim,zach).
+parent(sam,tim).
+parent(emma,tim).
+parent(josee,sam).
+parent(gilles,sam).
+female(marie).
+female(sylvie).
+female(anne).
+female(emma).
+female(josee).
+male(karl).
+male(jack).
+male(joe).
+male(bruno).
+male(paul).
+male(tim).
+male(zach).
+male(sam).
+male(gilles).
+</code></pre>
+ 
+Complete the predicate <em>gmp</em> replacing the <em>?</em> 
+with the appropriate variable. We want to identify the grandmother of Y on the paternal (father's side) from the facts listed above.
+
+<pre><code>
+gmp(X,Y) :- parent(?,?), 
+	    male(?), 
+	    parent(?,?), 
+	    female(?).
+</code></pre>
+
+Test your predicate with the following queries:<br>
+
+<pre><code>
+1 ?- gmp(emma,zach).
+true.
+</code></pre>
+
+<pre><code>
+2 ?- gmp(marie,paul).
+false.
+</code></pre>
+
+<pre><code>
+3 ?- gmp(X,tim).
+X = josee ;
+false.
+</code></pre>
+
+<pre><code>
+4 ?- gmp(X,anne).
+false.
+</code></pre>
+
+
+<h3>Exercise 3: Relationships (Electrical Connection) and Quiz</h3>
+
+<em>Please hand-in the answer to this question on Virtual Campus during your lab session but at the latest by Friday 6:00pm! Remember, your submission will only count if you have signed the lab attendance sheet.</em>
+
+Given the following database:
+
+<pre><code>
+% room lighting
+lit( roomA, lightA ).
+lit( roomB, lightB ).
+lit( roomA, lightC ).
+    
+% light switches
+control( lightA, switch1 ).
+control( lightB, switch2 ).
+control( lightB, switch1 ).
+control( lightC, switch3 ).
+    
+% wiring of lights
+hardwire(lightA).
+hardwire(lightB).
+plug( lightC, socketA ).
+
+% fuses
+fuse( lightA, fuse1 ).
+fuse( lightB, fuse2 ).
+fuse( socketA, fuse2 ).
+
+% fuse ok
+ok( fuse1 ).
+ok( fuse2 ).
+
+% switches on
+isOn( switch2 ).
+isOn( switch3 ).
+</code></pre>
+
+<pre><code>
+% hard-wired lights
+connected(L) :- fuse(L, F),
+		ok(F).
+</code></pre>
+
+<pre><code>
+% plugged in lights
+connected(L) :- plug(L,S),
+                fuse(S,F),
+                ok(F).
+</code></pre>
+
+<pre><code>
+bright(X) :- lit(X, L),
+             control(L, S),
+             isOn(S),
+             connected(L).
+</code></pre>
+
+
+Add facts to the database for roomC that has one light hard-wired to fuse3 and one light connected to a socketB. Add all necessary facts such that both lights are on. If your database modification is correct, Prolog will answer the query 
+<pre><code>
+?- bright(roomC).
+true ;
+true.
+</code></pre>
+Note the two ways that Prolog finds to make the query true.  
+
+
+</body></html>
+

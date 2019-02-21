@@ -1,0 +1,88 @@
+`7MMF'        .g8""8q.     .g8"""bgd  
+  MM        .dP'    `YM. .dP'     `M  
+  MM        dM'      `MM dM'       `  
+  MM        MM        MM MM           
+  MM      , MM.      ,MP MM.    `7MMF'
+  MM     ,M `Mb.    ,dP' `Mb.     MM  
+.JMMmmmmMMM   `"bmmd"'     `"bmmmdPY
+
+
+=====================================
+Task distribution
+
+Ivor: Model 
+Oliver: View
+Hansel: Controller
+Macky: Controller 
+=====================================
+
+October 1 (Hansel, Macky):
+Discuss responsibilities under Controller.
+
+October 2 (Oliver, Ivor):
+Changed main activity to include a drawer. Changed some colours and the launcher icon (experimental).
+
+October 5 (Oliver, Ivor, Macky, Hansel):
+Explore most all directories of the android studio project to increase our understanding of the IDE.
+Discuss multiple functional and non-functional requirements. Assign tasks for the upcoming week.
+
+October 9 (Hansel, Macky):
+Define rough classes for User and Task.
+
+October 12 (Oliver, Ivor, Macky):
+Expanded classes of Users and Task. Made AbstractUser, User and PrivilegedUser.
+Used a more OO approach to the design of these classes (access keywords, setters and getters for each class).
+Separated completion from deletion.
+Deleted unnnecessary methods, menus and icons.
+
+October 14 (Oliver, Ivor):
+Configured Firebase for use with the project for authentication and database purposes (using Oliver's account).
+[N.B.: Android Studio side of authentication and database is not fully implemented.]
+
+October 19 (Hansel, Oliver, Ivor):
+Began implementation of database functionality.  (Ivor)
+Authentication code and layout are nearing completion.  (Oliver)
+Began re-implementation of all user classes to extend Firebase users.  (Hansel)
+
+October 23 (Oliver, Ivor):
+Finalized EmailPasswordActivity (added strings - missing welcome screen image). (Oliver)
+Reformatted TaskList. (Oliver)
+
+October 25 (Ivor):
+Small bugfix in MainActivity; added requirements .docx to .gitignore
+
+October 25 (Hansel, Macky):
+Implement methods for GenericUser and PrivelegedUser, added attributes and methods for Messages, created class Message.
+
+October 30 (Oliver, Ivor):
+Adding drawables.  (Oliver)
+Added ShoppingItem and ShoppingList classes.  (Ivor)
+
+November 2 (Oliver, Ivor, Macky):
+Polished Deliverable 1
+
+November 6 (Ivor):
+Added classes for [Fridge and Cupboard] and [Broom Closet] functionalities.
+
+November 9 (Ivor, Oliver, Macky, Hansel):
+Started UML class diagrams for Deliverable 2.  (Ivor)
+Started UML sequence and state machine diagrams.  (Macky, Hansel)
+Added layout_list, layout_task_list, and modified EmailPasswordActivity.  Also simplified all Item and ItemList classes into generalized lists.  (Oliver)
+
+November 10 (Oliver):
+Simplify and add some classes to the model.
+Fixed layouts, added drawables, changed controller in MainActivity
+
+November 21 (Oliver):
+Major cleanup of MainActivity, added more layouts and componenents to existing layouts, added TaskEditorActivity, added ListView and updated User classes
+
+November 24 (Oliver):
+Complete user interface framework for Deliverable 3.
+
+November 25 (Oliver, Hansel):
+Implement new classes and changes for groups/families. (Oliver)
+Test and fix bugs of Firebase. (Oliver, Hansel)
+Final report draft. (Hansel)
+
+November 26 - December 1 (Oliver):
+Multiple changes to the source code (see GitHub)

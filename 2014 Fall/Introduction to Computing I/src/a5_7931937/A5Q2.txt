@@ -1,0 +1,23 @@
+The colour is green
+After moving: 
+The coordinates are (20,30) (60,70)
+The colour is blue
+r2 contains the point (50,50): true
+r2 contains the point 50,100: false
+
+The canvas is full. Unable to add a new rectangle.
+The rectangles on the canvas are: 
+The coordinates are (20,30) (60,70)
+The colour is blue
+The coordinates are (30,40) (60,60)
+The colour is green
+The coordinates are (10,10) (30,30)
+The colour is yellow
+The coordinates are (20,10) (50,50)
+The colour is yellow
+There are 2 yellow rectangles.
+The total perimeter is 480
+The minimum enclosing rectangle is: 
+The coordinates are (10,10) (60,70)
+The colour is red
+

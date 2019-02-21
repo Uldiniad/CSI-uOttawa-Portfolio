@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A3_Q2_Scott_7931937</title>
+</head>
+<body>
+<script>
+    const number = Math.floor(Math.random() * 1000 + 1);
+    document.write('Guess a number between 1 and 1000 <input type="text" id="guess"><br>');
+    document.write('<input type="submit" onclick="verify(parseInt(guess.value)); return false"><br><br>');
+    document.write('<output id="output">');
+
+    function verify(guess) {
+        if (guess === number) {
+            document.getElementById('output').innerHTML = 'Congratulations. You guessed the number!';
+        } else if (guess < number) {
+            document.getElementById('output').innerHTML = 'Too low. Try again';
+        } else {
+            document.getElementById('output').innerHTML = 'Too high. Try again';
+        }
+    }
+</script>
+</body>
+</html>

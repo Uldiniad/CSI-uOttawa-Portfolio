@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "553184261932",
+    "firebase_url": "https://dutyhelper-capedcrusaders.firebaseio.com",
+    "project_id": "dutyhelper-capedcrusaders",
+    "storage_bucket": "dutyhelper-capedcrusaders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553184261932:android:a19e52f30f811f82",
+        "android_client_info": {
+          "package_name": "capedcrusaders.dutyhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553184261932-6eft9gvh7aomjrpun57eh8spi8rkaudo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "capedcrusaders.dutyhelper",
+            "certificate_hash": "cbc0c61a9fa7f6add0712ad9e86d83c2ad4cc570"
+          }
+        },
+        {
+          "client_id": "553184261932-k02elmk0510jhicq0lvo10bqd5v76af6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCklKDlmlOsBe3N444MsN9JQ3GEmTPscTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553184261932-k02elmk0510jhicq0lvo10bqd5v76af6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

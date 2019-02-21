@@ -1,0 +1,6 @@
+#picture {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    -webkit-user-drag: none;
+}

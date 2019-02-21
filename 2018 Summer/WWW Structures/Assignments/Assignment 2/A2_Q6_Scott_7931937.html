@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2_Q6_Scott_7931937</title>
+</head>
+<body>
+<form>
+    Please enter a five digit number:
+    <input type="number" name="input"><br>
+    <input type="submit" onclick="document.getElementById('output').innerHTML = 'It is ' + verifyPalindrome(input).toString() + ' that '
++ input.value + ' is a palindrome'; return false"><br><br>
+    <output id="output"></output>
+</form>
+<script>
+    function verifyPalindrome(input) {
+        if (input.value.length !== 5 || input.value[0] === "0") {
+            window.alert("The entered number is not five digits long or starts with one or more 0s");
+            this.reload(true);
+        }
+        return input.value === input.value.split('').reverse().join('');
+    }
+</script>
+</body>
+</html>

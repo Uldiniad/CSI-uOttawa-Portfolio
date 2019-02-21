@@ -1,0 +1,9 @@
+Student Name			Student No.	Email@uottawa.ca	Section
+===============================================================================
+Ivor Benderavage		8171462		ibend067		SEG2505
+
+Oliver Charles Scott		7931937		oscot042		SEG2105B
+
+Macky Bakayoko			7937496		mbaka101		SEG2505
+
+Hansel-Timon En-Lin Ngien	8731928		hngie033		SEG2105B

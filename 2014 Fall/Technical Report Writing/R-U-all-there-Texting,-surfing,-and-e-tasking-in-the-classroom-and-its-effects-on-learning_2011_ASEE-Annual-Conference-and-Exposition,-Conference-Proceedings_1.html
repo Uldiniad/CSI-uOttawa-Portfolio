@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script language="JavaScript" type="text/javascript">
+            
+            var abstractURL = "http://scopus.com/scopus/record/display.url?view=basic&eid=2-s2.0-80051908704&origin=resultslist";
+            var testImgURL = "http://scddm.quosavl.com/ddm/images/btn_begindownload.gif";
+
+            function errorHandler (evt) {
+                document.getElementById('main_div').style.display = 'block'; }
+            
+            function loadHandler (evt) {
+                document.location = abstractURL;
+            }
+
+            function testConnection(x) {
+                var img = new Image();
+                img.onload = loadHandler;
+                img.onerror = errorHandler;
+                img.src = x;
+            }
+            
+            function onLoad() {
+                this.window.focus();
+                // adding timestamp to url to get around caching
+                testConnection(testImgURL + '?' + (new Date()).valueOf()); }
+
+        </script>
+    </head>
+    
+    <body onload="onLoad()">
+        <div id="main_div" style="display:none">
+            
+        </div>  
+    </body>
+</html>

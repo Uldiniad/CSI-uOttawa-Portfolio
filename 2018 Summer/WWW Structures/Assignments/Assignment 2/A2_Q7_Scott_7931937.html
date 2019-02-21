@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2_Q7_Scott_7931937</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Product #</th>
+        <th>Total sales ($)</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td id="product1sales">0.00</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td id="product2sales">0.00</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td id="product3sales">0.00</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td id="product4sales">0.00</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td id="product5sales">0.00</td>
+    </tr>
+</table>
+<script>
+    let product;
+    do {
+        product = parseInt(prompt("Product # (1-5). Anything else to exit"));
+        if (isNaN(product) || product < 1 || product > 5)
+            break;
+        let sold;
+        do {
+            sold = parseInt(prompt("Quantity sold"));
+            if (isNaN(sold) || sold < 0)
+                window.alert("Please enter a non-negative number")
+        } while (isNaN(sold) || sold < 0);
+        let price;
+        switch (product) {
+            case 1:
+                price = 2.98;
+                break;
+            case 2:
+                price = 4.50;
+                break;
+            case 3:
+                price = 9.98;
+                break;
+            case 4:
+                price = 4.49;
+                break;
+            case 5:
+                price = 6.87;
+        }
+        document.getElementById("product" + product + "sales").innerHTML =
+            (parseFloat(document.getElementById("product" + product + "sales").innerText) + price * sold).toFixed(2).toString();
+    } while (true);
+</script>
+</body>
+</html>

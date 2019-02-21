@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A4_Q6_Scott_7931937</title>
+</head>
+<body>
+<canvas id="canvas" style="height: 100%; width: 100%"></canvas>
+<script>
+    const canvas = document.getElementById("canvas");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    const context = canvas.getContext('2d');
+    context.beginPath();
+    context.moveTo(canvas.width / 2, canvas.height / 2);
+    context.lineTo(canvas.width / 2, canvas.height / 2 - 80);
+    context.lineTo(canvas.width / 2 + 80, canvas.height / 2);
+    let gradient = context.createLinearGradient(canvas.width / 2, canvas.height / 2, canvas.width / 2, canvas.height / 2 - 80);
+    gradient.addColorStop(0, "red");
+    gradient.addColorStop(0.5, "green");
+    gradient.addColorStop(1, "blue");
+    context.fillStyle = gradient;
+    context.fill()
+</script>
+</body>
+</html>

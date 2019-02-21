@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2_Q5_Scott_7931937</title>
+</head>
+<body>
+<form oninput="if (first.value !== '' && second.value !== '')
+    document.getElementById('output').innerHTML = 'It is ' + ((first.value % second.value) === 0).toString() +
+' that ' + first.value + ' is a multiple of ' + second.value">
+    First integer <input type="number" name="first"><br>
+    Second integer <input type="number" name="second"><br><br>
+    <output id="output"></output>
+</form>
+<!--If the user has filled both the first and second number inputs,
+write to the output element if it is true or false that the first number is a multiple of the second-->
+</body>

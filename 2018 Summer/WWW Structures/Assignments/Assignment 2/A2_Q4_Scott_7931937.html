@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2_Q4_Scott_7931937</title>
+    <style>
+        @keyframes squarepattern {
+            0% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+            25% {
+                top: calc(50% - 150px);
+                left: calc(50% + 150px);
+            }
+            50% {
+                top: calc(50% + 150px);
+                left: calc(50% + 150px);
+            }
+            75% {
+                top: calc(50% + 150px);
+                left: calc(50% - 150px);
+            }
+            100% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+        }
+
+        @-moz-keyframes squarepattern {
+            0% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+            25% {
+                top: calc(50% - 150px);
+                left: calc(50% + 150px);
+            }
+            50% {
+                top: calc(50% + 150px);
+                left: calc(50% + 150px);
+            }
+            75% {
+                top: calc(50% + 150px);
+                left: calc(50% - 150px);
+            }
+            100% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+        }
+
+        @-webkit-keyframes squarepattern {
+            0% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+            25% {
+                top: calc(50% - 150px);
+                left: calc(50% + 150px);
+            }
+            50% {
+                top: calc(50% + 150px);
+                left: calc(50% + 150px);
+            }
+            75% {
+                top: calc(50% + 150px);
+                left: calc(50% - 150px);
+            }
+            100% {
+                top: calc(50% - 150px);
+                left: calc(50% - 150px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div style="
+    animation: squarepattern 4s infinite;
+    -moz-animation: squarepattern 4s infinite;
+    -webkit-animation: squarepattern 4s infinite;
+    border: 10px solid red;
+    display: inline-block;
+    position: absolute;
+">
+</div>
+</body>

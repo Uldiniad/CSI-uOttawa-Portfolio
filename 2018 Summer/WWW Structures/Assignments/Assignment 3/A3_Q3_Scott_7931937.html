@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A3_Q3_Scott_7931937</title>
+</head>
+<body>
+<script>
+    let guesses = 0;
+    const number = Math.floor(Math.random() * 1000 + 1);
+    document.write('Guess a number between 1 and 1000 <input type="text" id="guess"><br>');
+    document.write("<input type='submit' onclick='verify(parseInt(guess.value)); return false'><br><br>");
+    document.write('<output id="output">');
+
+    function verify(guess) {
+        if (isNaN(guess)) {
+            document.getElementById("output").innerHTML = 'Wrong input! You should enter a number between 1 and 1000.';
+            return;
+        }
+        guesses++;
+        if (guess === number) {
+            document.getElementById('output').innerHTML = 'Congratulations. You guessed the number!';
+            if (guesses < 10) {
+                document.getElementById('output').innerHTML += 'Either you know the secret or you got lucky!';
+            } else if (guesses === 10) {
+                document.getElementById('output').innerHTML += 'Ahah! You know the secret!';
+            } else {
+                document.getElementById('output').innerHTML += 'You should be able to do better!';
+            }
+        } else if (guess < number) {
+            document.getElementById('output').innerHTML = 'Too low. Try again';
+        } else {
+            document.getElementById('output').innerHTML = 'Too high. Try again';
+        }
+    }
+</script>
+</body>
+</html>

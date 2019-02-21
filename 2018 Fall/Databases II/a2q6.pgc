@@ -1,0 +1,26 @@
+#include <math.h>
+
+float Variance(void) {
+    float mean;
+    float variance;
+    int count;
+    EXEC SQL BEGIN DECLARE SECTION;
+        float age;
+    EXEC SQL END DECLARE SECTION;
+    mean = 0.0;
+    variance = 0.0;
+    count = 0;
+    EXEC SQL DECLARE ages CURSOR FOR SELECT age FROM Sailors;
+    EXEC SQL OPEN ages;
+    EXEC SQL FETCH ages INTO :age;
+    while (strcmp(SQLSTATE, "02000") != 0) {
+        count = count + 1;
+        mean = mean + age;
+        variance = variance + pow(age, 2);
+        EXEC SQL FETCH ages INTO :age;
+    }
+    EXEC SQL CLOSE ages;
+    mean = mean / count;
+    variance = variance / count - pow(mean, 2);
+    return variance;
+}

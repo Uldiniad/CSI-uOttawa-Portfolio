@@ -1,0 +1,6 @@
+Use the following commands in Bash:
+
+git remote remove origin
+git remote add origin https://github.com/Uldiniad/DutyHelper.git
+git remote set-url --push origin https://github.com/USERNAME/DutyHelper.git
+git remote -v

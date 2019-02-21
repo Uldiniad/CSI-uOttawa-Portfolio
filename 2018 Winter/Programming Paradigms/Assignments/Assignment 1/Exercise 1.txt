@@ -1,0 +1,5 @@
+a) findall(Employee,(employee(Employee,Company),company(Company,Location),person(Employee,Home),Home \== Location),L).
+b) findall(Company,(company(Company,Location),city(Location,ontario)),L).
+c) findall(Person,(person(Person,_),not(employee(Person,_))),L).
+d) findall(Employee,(employee(Employee,Company),company(Company,ottawa)),L).
+e) setof(Employee,Company^(employee(Employee,Company),company(Company,ottawa)),L).

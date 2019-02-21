@@ -1,0 +1,61 @@
+**/.idea/
+**/.ipynb_checkpoints/
+**/.settings/
+**/build/
+**/cmake-build-debug/
+**/doc/
+**/out/
+**/pgsql/
+**/venv/
+**/Deliverable 4/*.zip
+**/Data Structures and Algorithms/
+**/Programming Concepts with C++/Labs
+**/Operating Systems/Labs
+**/Introduction to Computing II/
+**/ocsf/
+**/simplechat1/
+*use*
+*DESKTOP*
+*Timetable*
+*olution*
+*sol*
+*.accdb
+*.gz
+*.class
+*.iml
+*.java~
+*.pl~
+*.bak
+*.jar
+*.jsp
+*.classpath
+*.prefs
+*.project
+*.dat
+*.jsdtscope
+*.tmp
+*.temp
+*.cmo
+*.cmi
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.rdp
+*.use
+*.vwf
+*.qpf
+*.qsf
+*.qws
+*.bdf
+*.accdb
+*.download
+/2015 Winter/
+/2019 Winter/
