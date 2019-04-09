@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2 - Oliver Charles Scott (7931937)</title>
+</head>
+<body onload="
+    let icosahedronA = new Icosahedron(false);
+    let icosahedronB = new Icosahedron(true);
+    let cylinder = new Cylinder();
+    let lattice = new Lattice();
+    let lattices = new Lattices();
+
+    icosahedronA.gl = getWebGLContext(document.getElementById('icosahedronA'));
+    icosahedronB.gl = getWebGLContext(document.getElementById('icosahedronB'));
+    cylinder.gl = getWebGLContext(document.getElementById('cylinder'));
+    lattice.gl = getWebGLContext(document.getElementById('lattice'));
+    lattices.gl = getWebGLContext(document.getElementById('lattices'));
+
+    icosahedronA.main();
+    icosahedronB.main();
+    cylinder.main();
+    lattice.main();
+    lattices.main();
+">
+<canvas height="512" id="icosahedronA" width="512">
+    Please use a browser that supports "canvas"
+</canvas>
+<canvas height="512" id="icosahedronB" width="512">
+    Please use a browser that supports "canvas"
+</canvas>
+<br>
+<canvas height="512" id="cylinder" width="512">
+    Please use a browser that supports "canvas"
+</canvas>
+
+<canvas height="512" id="lattice" width="512">
+    Please use a browser that supports "canvas"
+</canvas>
+<canvas height="512" id="lattices" width="512">
+    Please use a browser that supports "canvas"
+</canvas>
+<script src="../lib/webgl-utils.js"></script>
+<script src="../lib/webgl-debug.js"></script>
+<script src="../lib/cuon-utils.js"></script>
+<script src="../../node_modules/gl-matrix/gl-matrix.js"></script>
+<script src="../../node_modules/three/build/three.js" type="text/javascript"></script>
+<script src="Icosahedron.js"></script>
+<script src="Cylinder.js"></script>
+<script src="RenderShape.js"></script>
+<script src="Lattice.js"></script>
+<script src="Lattices.js"></script>
+</body>
+</html>
